@@ -1,4 +1,8 @@
 streamlit
-sklearn
 pandas
+scikit-learn
+catboost
+xgboost
+lightgbm
 numpy
+scipy
