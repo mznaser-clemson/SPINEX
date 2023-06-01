@@ -403,7 +403,7 @@ class SPINEX(BaseEstimator, ClassifierMixin):
 import io
     
 # Set up the Streamlit interface
-st.title('SPINEX: Similarity-based Predictions and Explainable Neighbors Exploration [SPINEXClassifier - Demo]')
+st.title('SPINEX: Similarity-based Predictions with Explainable Neighbors Exploration [SPINEXClassifier - Demo]')
 
 # Add your name, website, and email using Markdown
 st.markdown("## About Us")
@@ -413,7 +413,7 @@ st.markdown("- **Website:** [www.mznaser.com](http://www.mznaser.com)")
 
 # Create a sidebar with a title and text
 st.sidebar.title("Read Me")
-st.sidebar.markdown("Please feel free to try our still-in-development demo and read out preprint () to learn more about SPINEX, its derivatives and fuctions. You can cite our work as, Naser M.Z., Al-Bashiti M.K., Naser A.Z. (2023). SPINEX: Similarity-based Predictions and Explainable Neighbors Exploration for Regression and Classification Tasks in Machine Learning. ArXiv. Please be patient while we improve SPINEX.")
+st.sidebar.markdown("Please feel free to try our still-in-development demo and read out preprint () to learn more about SPINEX, its derivatives and fuctions. You can cite our work as, Naser M.Z., Al-Bashiti M.K., Naser A.Z. (2023). SPINEX: Similarity-based Predictions with Explainable Neighbors Exploration for Regression and Classification Tasks in Machine Learning. ArXiv. Please be patient while we improve SPINEX.")
 
 # File upload
 uploaded_file = st.file_uploader("Upload file", type=["csv", "xlsx"])
