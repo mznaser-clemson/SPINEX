@@ -403,17 +403,17 @@ class SPINEX(BaseEstimator, ClassifierMixin):
 import io
     
 # Set up the Streamlit interface
-st.title('SPINEX: Similarity-based Predictions with Interpretable Neighbors Exploration [SPINEXClassifier - Demo]')
+st.title('SPINEX: Similarity-based Predictions with Explainable Neighbors Exploration [SPINEXClassifier - Demo]')
 
 # Add your name, website, and email using Markdown
 st.markdown("## About Us")
-st.markdown("- **Name:** M.Z. Naser, Mohammad Khaled al-Bashiti, A.Z. Naser")
+st.markdown("- **Creators:** M.Z. Naser, M.K. al-Bashiti, A.Z. Naser")
 st.markdown("- **Website:** [www.mznaser.com](http://www.mznaser.com)")
 #st.markdown("- **Email:** mznaser@clemson.edu")
 
 # Create a sidebar with a title and text
 st.sidebar.title("Read Me")
-st.sidebar.markdown("Please feel free to read out preprint () to learn more about SPINEX, its derivatives and fuctions. You can cite our work as, Naser M.Z., Al-Bashiti M.K., Naser A.Z. (2023). SPINEX: Similarity-based Predictions and Explainable Neighbors Exploration for Regression and Classification Tasks in Machine Learning. ArXiv. ")
+st.sidebar.markdown("Please feel free to try our still-in-development demo and read out preprint () to learn more about SPINEX, its derivatives and fuctions. You can cite our work as, Naser M.Z., Al-Bashiti M.K., Naser A.Z. (2023). SPINEX: Similarity-based Predictions with Explainable Neighbors Exploration for Regression and Classification Tasks in Machine Learning. ArXiv. Please be patient with us while we improve SPINEX. Please note that run time(s) can vary at the moment.")
 
 # File upload
 uploaded_file = st.file_uploader("Upload file", type=["csv", "xlsx"])
@@ -433,9 +433,29 @@ if uploaded_file is not None:
     X = data.iloc[:, :-1]  # Assuming the ground truth is the far-right column
     y = data.iloc[:, -1]
 
-    # Standardize the entire dataset
-    scaler = StandardScaler()
-    X = scaler.fit_transform(X)
+    # Define the desired transformation method (you can choose one of: 'MinMax', 'Robust', 'Log', 'Power', or 'None')
+    transformation_method = 'MinMax'
+
+    # Apply the selected transformation method
+    if transformation_method == 'Standard':
+        scaler = StandardScaler()
+        X = scaler.fit_transform(X)
+    elif transformation_method == 'MinMax':
+        scaler = MinMaxScaler()
+        X = scaler.fit_transform(X)
+    elif transformation_method == 'Robust':
+        scaler = RobustScaler()
+        X = scaler.fit_transform(X)
+    elif transformation_method == 'Log':
+        X = np.log1p(X)  # Apply the natural logarithm transformation
+    elif transformation_method == 'Power':
+        transformer = PowerTransformer(method='yeo-johnson', standardize=False)  # You can choose 'box-cox' instead if desired
+        X = transformer.fit_transform(X)
+    elif transformation_method == 'None':
+        pass  # No transformation is applied
+    else:
+        print("Invalid transformation method selected.")
+
     
     # Initialize the SPINEX model with desired parameters
     # (without the 'preprocessor' argument)
@@ -1009,5 +1029,4 @@ if uploaded_file is not None:
         plt.ylabel('Features')
         #plt.show()
         st.pyplot(fig)
-
 
