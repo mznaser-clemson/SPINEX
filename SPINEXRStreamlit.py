@@ -505,7 +505,7 @@ st.title('SPINEX: Similarity-based Predictions with Explainable Neighbors Explor
 
 # Add your name, website, and email using Markdown
 st.markdown("## About Us")
-st.markdown("- **Name:** M.Z. Naser, Mohammad Khaled al-Bashiti, A.Z. Naser")
+st.markdown("- **Name:** M.Z. Naser, M.K. al-Bashiti, A.Z. Naser")
 st.markdown("- **Website:** [www.mznaser.com](http://www.mznaser.com)")
 #st.markdown("- **Email:** mznaser@clemson.edu")
 
