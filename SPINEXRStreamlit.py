@@ -511,7 +511,7 @@ st.markdown("- **Website:** [www.mznaser.com](http://www.mznaser.com)")
 
 # Create a sidebar with a title and text
 st.sidebar.title("Read Me")
-st.sidebar.markdown("Please feel free to try our still-in-development demo and read out preprint to learn more about SPINEX, its derivatives and fuctions. You can cite our work as, Naser M.Z., Al-Bashiti M.K., Naser A.Z. (2023). SPINEX: Similarity-based Predictions with Explainable Neighbors Exploration for Regression and Classification Tasks in Machine Learning. https://doi.org/10.48550/arXiv.2306.01029. The target must be labeled as 'Outcome'.Please be patient with us while we improve SPINEX. Please note that run time(s) can vary at the moment.")
+st.sidebar.markdown("Please feel free to try our still-in-development demo and read out preprint to learn more about SPINEX, its derivatives and fuctions. You can cite our work as, Naser M.Z., Al-Bashiti M.K., Naser A.Z. (2023). SPINEX: Similarity-based Predictions with Explainable Neighbors Exploration for Regression and Classification Tasks in Machine Learning. https://doi.org/10.48550/arXiv.2306.01029. The target must be labeled as 'Outcome'. Please be patient with us while we improve SPINEX. Please note that run time(s) can vary at the moment.")
 
 # File upload
 uploaded_file = st.file_uploader("Upload file", type=["csv", "xlsx"])
