@@ -8,6 +8,6 @@ Please feel free to read out preprint () to learn more about SPINEX, its derivat
 <be>
 Now, you can easily install SPINEX:
 
-pip install SPINEX  
-from SPINEX import SPINEXRegressor  
-from SPINEX import SPINEXClassifer 
+***pip install SPINEX***  
+***from SPINEX import SPINEXRegressor***  
+***from SPINEX import SPINEXClassifer*** 
