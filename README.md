@@ -4,7 +4,6 @@ Please feel free to read out preprint to learn more about SPINEX, its derivative
 
 >Our preprint [https://arxiv.org/abs/2306.01029]  
 >Our paper [https://doi.org/10.1016/j.asoc.2024.111518]  
-
 >Our package is now live [https://pypi.org/project/SPINEX/]
 <be>
 Now, you can easily install SPINEX:
